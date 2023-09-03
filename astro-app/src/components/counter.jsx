@@ -8,6 +8,6 @@ export default function Counter() {
 
   return <div className="text-white">{counter}
   <hr />
-  <button onClick={()=> {increment()}}>Increment +</button>
+  <button className="m-3 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 hover:text-white" onClick={()=> {increment()}}>Increment +</button>
   </div>;
 }
