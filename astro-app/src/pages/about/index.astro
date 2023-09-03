@@ -1,4 +1,5 @@
 ---
+import Counter from '../../components/counter';
 import AboutLayout from '../../layouts/AboutLayout.astro';
 
 ---
@@ -6,4 +7,5 @@ import AboutLayout from '../../layouts/AboutLayout.astro';
 
 <AboutLayout subtitle="nested">
     <h2 class="text-white text-3xl">About layout nested</h2>
+    <Counter client:load />
 </AboutLayout>
