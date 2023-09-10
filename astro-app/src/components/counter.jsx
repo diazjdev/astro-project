@@ -1,12 +1,14 @@
-import React, { useState } from "react";
 
+import { useStore } from '@nanostores/react';
+import React, { useState } from "react";
+import { getCounter, increaseCounter, counter } from "../store/store";
 export default function Counter() {
-    const [counter, setCounter]= useState(0);
+  const $myCounter = useStore(counter)
     const increment =()=>{
-        setCounter(counter + 1)
+        increaseCounter()
     }
 
-  return <div className="text-white">{counter}
+  return <div className="text-white">{$myCounter}
   <hr />
   <button className="m-3 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700 hover:text-white" onClick={()=> {increment()}}>Increment +</button>
   </div>;
